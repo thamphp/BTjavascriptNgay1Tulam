@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="" method="post" onsubmit="return handleSubmit();">
+	Họ tên: 
+	<input id="name" type="text" value="" placeholder="Nhập tên của bạn" /> <br />
+	Tuổi:
+	<input id="age" type="number" placeholder="Nhập tuổi của bạn"> <br />
+	<input type="submit" value="Hiển thị thông tin" />
+</form>
+<div id="result" style="color: green">
+	
+</div>
+<script type="text/javascript">
+	function handleSubmit() {
+		//lấy ra thông tin các đối tượng tên và tuổi với id tương ứng
+		var obj_name = document.getElementById('name').value;
+		var obj_age = document.getElementById('age').value;
+		var show = "Tên vừa nhập: " + obj_name;
+		   show += "\n";
+			show += "Tuổi vừa nhập: " + obj_age;
+		alert(show);
+		document.getElementById('result').innerHTML = show;
+		//trả về giá trị false để ngăn ngừa form submit
+		return false;
+	}
+</script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width =device-width, initial-scale =1">
+	<title></title>
+	<!-- <link rel="stylesheet" type="text/css" href="maxcdn.bootstrapcdn.com/bootstap/3.4.1/css/bootstap.min.css"> -->
+	<style type="text/css">
+		div{
+	    height: 100px;
+	    width: 80px;
+	</style>
+</head>
+<body>
+	
+		<h4 style="text-align: center; background-color: yellow;">Javascript Onsubmit Event Example</h4>
+	<form action="" method="post" onsubmit="return handleSubmit();">
+   <div class="form-group">
+    <label for="exampleInputName">Name:</labiel>
+    <input type="text" class="form-control" id="pass1" placeholder="Enter your name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email:</label>
+    <input type="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter your email">
+  
+  </div>
+ 
+  <div class="form-group">
+    <label for="exampleInputPassword2">Contact No:</label>
+    <input type="text" class="form-control" id="pass2" placeholder="Enter your Contact No">
+  </div>
+  
+  <button style="width: 80%;" type="submit" class="btn btn-yellow">Submit</button>
+</form>
+
+<div id="result" style="color: green;"></div>
+<script type="text/javascript">
+	function handleSubmit(){
+		var name = document.getElementById('pass1').value;
+		var email = document.getElementById('name').value;
+		var contact = document.getElementById('pass2').value;
+		var result = document.getElementById('result').value;
+		var string = "Name:" + name + "<br>";
+		string += "Email:" + email + "<br>";
+		string += "Contact No:" + contact + "<br>";
+		result = document.getElementById('result').innerHTML =string;
+		
+		return false;
+	}
+
+
+
+</script>
+
+
+</body>
+</html>
